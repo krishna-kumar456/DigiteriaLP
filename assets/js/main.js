@@ -136,65 +136,65 @@
 
 		// Events.
 		// Note: If you're *not* using AJAX, get rid of this event listener.
-		$form.addEventListener('submit', function (event) {
+		// $form.addEventListener('submit', function (event) {
 
-			event.stopPropagation();
-			event.preventDefault();
+		// 	event.stopPropagation();
+		// 	event.preventDefault();
 
-			// Hide message.
-			$message._hide();
+		// 	// Hide message.
+		// 	$message._hide();
 
-			// Disable submit.
-			$submit.disabled = true;
+		// 	// Disable submit.
+		// 	$submit.disabled = true;
 
-			// Process form.
-			// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
-			// but there's enough here to piece together a working AJAX submission call that does.
+		// 	// Process form.
+		// 	// Note: Doesn't actually do anything yet (other than report back with a "thank you"),
+		// 	// but there's enough here to piece together a working AJAX submission call that does.
 
-			var emailInput = $('#email').val();
+		// 	var emailInput = $('#email').val();
 
-			if (emailInput != '') {
+		// 	if (emailInput != '') {
 
-				window.setTimeout(function () {
+		// 		window.setTimeout(function () {
 
-					// Reset form.
-					$form.reset();
+		// 			// Reset form.
+		// 			$form.reset();
 
-					// Enable submit.
-					$submit.disabled = false;
+		// 			// Enable submit.
+		// 			$submit.disabled = false;
 
-					// Show message.
-					$message._show('success', 'Thank you!');
-
-
-					//$message._show('failure', 'Something went wrong. Please try again.');
-
-				}, 750);
+		// 			// Show message.
+		// 			$message._show('success', 'Thank you!');
 
 
-			}
+		// 			//$message._show('failure', 'Something went wrong. Please try again.');
 
-			else {
+		// 		}, 750);
 
-				window.setTimeout(function () {
 
-					// Reset form.
-					$form.reset();
+		// 	}
 
-					// Enable submit.
-					$submit.disabled = false;
+		// 	else {
 
-					// Show message.
-					//$message._show('success', 'Thank you!');
-					$message._show('failure', 'Please enter your email before submitting.');
+		// 		window.setTimeout(function () {
 
-				}, 750);
+		// 			// Reset form.
+		// 			$form.reset();
 
-			}
+		// 			// Enable submit.
+		// 			$submit.disabled = false;
 
-			$message.type = "";
+		// 			// Show message.
+		// 			//$message._show('success', 'Thank you!');
+		// 			$message._show('failure', 'Please enter your email before submitting.');
 
-		});
+		// 		}, 750);
+
+		// 	}
+
+		// 	$message.type = "";
+
+		// });
 
 	})();
 
